@@ -61,9 +61,9 @@ namespace DotNetNuke.Modules.EmbedComparison
         {
             try
             {
-                if (Settings.Contains("GUID"))
+                if (Settings.Contains("GUID") && Settings.Contains("KEY"))
                 {
-                    documentViewer.Attributes.Add("Src", String.Format("http://apps.groupdocs.com/Comparison2/questionnaire-Comparison/{0}/?quality=50&use_pdf=False&download=False&referer=DNN/1.0.0", Settings["GUID"]));
+                    documentViewer.Attributes.Add("Src", String.Format("http://apps.groupdocs.com/document-comparison/embed/{0}/{1}?referer=DNN/1.0.0", Settings["KEY"], Settings["GUID"]));
                 }
                 if (Settings.Contains("FrameWidth"))
                 {

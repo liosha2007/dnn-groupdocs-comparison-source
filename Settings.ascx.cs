@@ -57,6 +57,9 @@ namespace DotNetNuke.Modules.EmbedComparison
                     //Check for existing settings and use those on this page
                     //Settings["SettingName"]
 
+                    if (Settings.Contains("KEY"))
+                        txtKey.Text = Settings["KEY"].ToString();
+
                     if (Settings.Contains("GUID"))
                         txtGuid.Text = Settings["GUID"].ToString();
 
@@ -86,6 +89,7 @@ namespace DotNetNuke.Modules.EmbedComparison
 
                 //the following are two sample Module Settings, using the text boxes that are commented out in the ASCX file.
                 //module settings
+                modules.UpdateModuleSetting(ModuleId, "KEY", txtKey.Text);
                 modules.UpdateModuleSetting(ModuleId, "GUID", txtGuid.Text);
                 modules.UpdateModuleSetting(ModuleId, "FrameWidth", txtFrameWidth.Text);
                 modules.UpdateModuleSetting(ModuleId, "FrameHeight", txtFrameHeight.Text);

@@ -29,6 +29,13 @@
             
             </summary>
         </member>
+        <member name="M:DotNetNuke.Modules.EmbedComparison.View.Page_Load(System.Object,System.EventArgs)">
+            -----------------------------------------------------------------------------
+            <summary>
+            Page_Load runs when the control is loaded
+            </summary>
+            -----------------------------------------------------------------------------
+        </member>
         <member name="F:DotNetNuke.Modules.EmbedComparison.View.documentViewer">
             <summary>
             documentViewer control.
@@ -37,13 +44,6 @@
             Auto-generated field.
             To modify move field declaration from designer file to code-behind file.
             </remarks>
-        </member>
-        <member name="M:DotNetNuke.Modules.EmbedComparison.View.Page_Load(System.Object,System.EventArgs)">
-            -----------------------------------------------------------------------------
-            <summary>
-            Page_Load runs when the control is loaded
-            </summary>
-            -----------------------------------------------------------------------------
         </member>
         <member name="T:DotNetNuke.Modules.EmbedComparison.EmbedComparisonSettingsBase">
             <summary>
@@ -54,96 +54,6 @@
             are accessible to your module's controls (that inherity from EmbedComparisonSettingsBase
             
             </summary>
-        </member>
-        <member name="T:DotNetNuke.Modules.EmbedComparison.Settings">
-            -----------------------------------------------------------------------------
-            <summary>
-            The Settings class manages Module Settings
-            
-            Typically your settings control would be used to manage settings for your module.
-            There are two types of settings, ModuleSettings, and TabModuleSettings.
-            
-            ModuleSettings apply to all "copies" of a module on a site, no matter which page the module is on. 
-            
-            TabModuleSettings apply only to the current module on the current page, if you copy that module to
-            another page the settings are not transferred.
-            
-            If you happen to save both TabModuleSettings and ModuleSettings, TabModuleSettings overrides ModuleSettings.
-            
-            Below we have some examples of how to access these settings but you will need to uncomment to use.
-            
-            Because the control inherits from EmbedComparisonSettingsBase you have access to any custom properties
-            defined there, as well as properties from DNN such as PortalId, ModuleId, TabId, UserId and many more.
-            </summary>
-            -----------------------------------------------------------------------------
-        </member>
-        <member name="F:DotNetNuke.Modules.EmbedComparison.Settings.lblGuid">
-            <summary>
-            lblGuid control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="F:DotNetNuke.Modules.EmbedComparison.Settings.txtGuid">
-            <summary>
-            txtGuid control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="F:DotNetNuke.Modules.EmbedComparison.Settings.lblFrameWidth">
-            <summary>
-            lblFrameWidth control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="F:DotNetNuke.Modules.EmbedComparison.Settings.txtFrameWidth">
-            <summary>
-            txtFrameWidth control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="F:DotNetNuke.Modules.EmbedComparison.Settings.lblFrameHeight">
-            <summary>
-            lblFrameHeight control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="F:DotNetNuke.Modules.EmbedComparison.Settings.txtFrameHeight">
-            <summary>
-            txtFrameHeight control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="M:DotNetNuke.Modules.EmbedComparison.Settings.LoadSettings">
-            -----------------------------------------------------------------------------
-            <summary>
-            LoadSettings loads the settings from the Database and displays them
-            </summary>
-            -----------------------------------------------------------------------------
-        </member>
-        <member name="M:DotNetNuke.Modules.EmbedComparison.Settings.UpdateSettings">
-            -----------------------------------------------------------------------------
-            <summary>
-            UpdateSettings saves the modified settings to the Database
-            </summary>
-            -----------------------------------------------------------------------------
         </member>
         <member name="T:DotNetNuke.Modules.EmbedComparison.Data.SqlDataProvider">
             -----------------------------------------------------------------------------
@@ -167,24 +77,111 @@
             </summary>
             -----------------------------------------------------------------------------
         </member>
-        <member name="T:DotNetNuke.Modules.EmbedComparison.Edit">
+        <member name="T:DotNetNuke.Modules.EmbedComparison.Settings">
             -----------------------------------------------------------------------------
             <summary>
-            The EditEmbedComparison class is used to manage content
+            The Settings class manages Module Settings
             
-            Typically your edit control would be used to create new content, or edit existing content within your module.
-            The ControlKey for this control is "Edit", and is defined in the manifest (.dnn) file.
+            Typically your settings control would be used to manage settings for your module.
+            There are two types of settings, ModuleSettings, and TabModuleSettings.
             
-            Because the control inherits from EmbedComparisonModuleBase you have access to any custom properties
+            ModuleSettings apply to all "copies" of a module on a site, no matter which page the module is on. 
+            
+            TabModuleSettings apply only to the current module on the current page, if you copy that module to
+            another page the settings are not transferred.
+            
+            If you happen to save both TabModuleSettings and ModuleSettings, TabModuleSettings overrides ModuleSettings.
+            
+            Below we have some examples of how to access these settings but you will need to uncomment to use.
+            
+            Because the control inherits from EmbedComparisonSettingsBase you have access to any custom properties
             defined there, as well as properties from DNN such as PortalId, ModuleId, TabId, UserId and many more.
-            
             </summary>
             -----------------------------------------------------------------------------
         </member>
-        <member name="M:DotNetNuke.Modules.EmbedComparison.Edit.Page_Load(System.Object,System.EventArgs)">
+        <member name="F:DotNetNuke.Modules.EmbedComparison.Settings.lblKey">
+            <summary>
+            lblKey элемент управления.
+            </summary>
+            <remarks>
+            Автоматически создаваемое поле.
+            Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.EmbedComparison.Settings.txtKey">
+            <summary>
+            txtKey элемент управления.
+            </summary>
+            <remarks>
+            Автоматически создаваемое поле.
+            Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.EmbedComparison.Settings.lblGuid">
+            <summary>
+            lblGuid элемент управления.
+            </summary>
+            <remarks>
+            Автоматически создаваемое поле.
+            Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.EmbedComparison.Settings.txtGuid">
+            <summary>
+            txtGuid элемент управления.
+            </summary>
+            <remarks>
+            Автоматически создаваемое поле.
+            Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.EmbedComparison.Settings.lblFrameWidth">
+            <summary>
+            lblFrameWidth элемент управления.
+            </summary>
+            <remarks>
+            Автоматически создаваемое поле.
+            Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.EmbedComparison.Settings.txtFrameWidth">
+            <summary>
+            txtFrameWidth элемент управления.
+            </summary>
+            <remarks>
+            Автоматически создаваемое поле.
+            Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.EmbedComparison.Settings.lblFrameHeight">
+            <summary>
+            lblFrameHeight элемент управления.
+            </summary>
+            <remarks>
+            Автоматически создаваемое поле.
+            Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.EmbedComparison.Settings.txtFrameHeight">
+            <summary>
+            txtFrameHeight элемент управления.
+            </summary>
+            <remarks>
+            Автоматически создаваемое поле.
+            Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+            </remarks>
+        </member>
+        <member name="M:DotNetNuke.Modules.EmbedComparison.Settings.LoadSettings">
             -----------------------------------------------------------------------------
             <summary>
-            Page_Load runs when the control is loaded
+            LoadSettings loads the settings from the Database and displays them
+            </summary>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="M:DotNetNuke.Modules.EmbedComparison.Settings.UpdateSettings">
+            -----------------------------------------------------------------------------
+            <summary>
+            UpdateSettings saves the modified settings to the Database
             </summary>
             -----------------------------------------------------------------------------
         </member>
@@ -204,6 +201,27 @@
             process for a module.
             
             Below you will find stubbed out implementations of each, uncomment and populate with your own data
+            </summary>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="T:DotNetNuke.Modules.EmbedComparison.Edit">
+            -----------------------------------------------------------------------------
+            <summary>
+            The EditEmbedComparison class is used to manage content
+            
+            Typically your edit control would be used to create new content, or edit existing content within your module.
+            The ControlKey for this control is "Edit", and is defined in the manifest (.dnn) file.
+            
+            Because the control inherits from EmbedComparisonModuleBase you have access to any custom properties
+            defined there, as well as properties from DNN such as PortalId, ModuleId, TabId, UserId and many more.
+            
+            </summary>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="M:DotNetNuke.Modules.EmbedComparison.Edit.Page_Load(System.Object,System.EventArgs)">
+            -----------------------------------------------------------------------------
+            <summary>
+            Page_Load runs when the control is loaded
             </summary>
             -----------------------------------------------------------------------------
         </member>

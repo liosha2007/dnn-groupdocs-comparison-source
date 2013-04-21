@@ -5,7 +5,11 @@
 <h2 id="dnnSitePanel-BasicSettings" class="dnnFormSectionHead"><a href="" class="dnnSectionExpanded"><%=LocalizeString("BasicSettings")%></a></h2>
 <fieldset>
     <div class="dnnFormItem">
-        <dnn:Label ID="lblGuid" Text="GUID" runat="server" /> 
+        <dnn:Label ID="lblKey" Text="Compare Key" runat="server" /> 
+        <asp:TextBox ID="txtKey" runat="server" />
+    </div>
+    <div class="dnnFormItem">
+        <dnn:Label ID="lblGuid" Text="Compare GUID" runat="server" /> 
         <asp:TextBox ID="txtGuid" runat="server" />
     </div>
     <div class="dnnFormItem">
