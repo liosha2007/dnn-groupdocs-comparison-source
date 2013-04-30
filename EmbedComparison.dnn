@@ -1,6 +1,6 @@
 <dotnetnuke type="Package" version="5.0">
   <packages>
-    <package name="Groupdocs.EmbeddedDocumentComparison" type="Module" version="01.00.00">
+    <package name="Groupdocs.EmbeddedDocumentComparison" type="Module" version="01.00.01">
       <friendlyName>EmbedComparison</friendlyName>
       <description>Groupdocs EmbedComparison module</description>
       <iconFile>Images/icon_extensions.gif</iconFile>

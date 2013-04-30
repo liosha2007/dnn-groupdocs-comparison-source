@@ -4,21 +4,6 @@
         <name>EmbedComparison</name>
     </assembly>
     <members>
-        <member name="T:DotNetNuke.Modules.EmbedComparison.View">
-            -----------------------------------------------------------------------------
-            <summary>
-            The View class displays the content
-            
-            Typically your view control would be used to display content or functionality in your module.
-            
-            View may be the only control you have in your project depending on the complexity of your module
-            
-            Because the control inherits from EmbedComparisonModuleBase you have access to any custom properties
-            defined there, as well as properties from DNN such as PortalId, ModuleId, TabId, UserId and many more.
-            
-            </summary>
-            -----------------------------------------------------------------------------
-        </member>
         <member name="T:DotNetNuke.Modules.EmbedComparison.EmbedComparisonModuleBase">
             <summary>
             This base class can be used to define custom properties for multiple controls. 
@@ -26,32 +11,6 @@
             
             Because the class inherits from PortalModuleBase, properties like ModuleId, TabId, UserId, and others, 
             are accessible to your module's controls (that inherity from EmbedComparisonModuleBase
-            
-            </summary>
-        </member>
-        <member name="M:DotNetNuke.Modules.EmbedComparison.View.Page_Load(System.Object,System.EventArgs)">
-            -----------------------------------------------------------------------------
-            <summary>
-            Page_Load runs when the control is loaded
-            </summary>
-            -----------------------------------------------------------------------------
-        </member>
-        <member name="F:DotNetNuke.Modules.EmbedComparison.View.documentViewer">
-            <summary>
-            documentViewer control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="T:DotNetNuke.Modules.EmbedComparison.EmbedComparisonSettingsBase">
-            <summary>
-            This base class can be used to define custom properties for multiple controls. 
-            An example module, DNNSimpleArticle (http://dnnsimplearticle.codeplex.com) uses this for an ArticleId
-            
-            Because the class inherits from SettingsModuleBase, properties like ModuleId, TabId, UserId, and others, 
-            are accessible to your module's controls (that inherity from EmbedComparisonSettingsBase
             
             </summary>
         </member>
@@ -77,6 +36,25 @@
             </summary>
             -----------------------------------------------------------------------------
         </member>
+        <member name="T:DotNetNuke.Modules.EmbedComparison.Components.FeatureController">
+            -----------------------------------------------------------------------------
+            <summary>
+            The Controller class for EmbedComparison
+            
+            The FeatureController class is defined as the BusinessController in the manifest file (.dnn)
+            DotNetNuke will poll this class to find out which Interfaces the class implements. 
+            
+            The IPortable interface is used to import/export content from a DNN module
+            
+            The ISearchable interface is used by DNN to index the content of a module
+            
+            The IUpgradeable interface allows module developers to execute code during the upgrade 
+            process for a module.
+            
+            Below you will find stubbed out implementations of each, uncomment and populate with your own data
+            </summary>
+            -----------------------------------------------------------------------------
+        </member>
         <member name="T:DotNetNuke.Modules.EmbedComparison.Settings">
             -----------------------------------------------------------------------------
             <summary>
@@ -98,6 +76,16 @@
             defined there, as well as properties from DNN such as PortalId, ModuleId, TabId, UserId and many more.
             </summary>
             -----------------------------------------------------------------------------
+        </member>
+        <member name="T:DotNetNuke.Modules.EmbedComparison.EmbedComparisonSettingsBase">
+            <summary>
+            This base class can be used to define custom properties for multiple controls. 
+            An example module, DNNSimpleArticle (http://dnnsimplearticle.codeplex.com) uses this for an ArticleId
+            
+            Because the class inherits from SettingsModuleBase, properties like ModuleId, TabId, UserId, and others, 
+            are accessible to your module's controls (that inherity from EmbedComparisonSettingsBase
+            
+            </summary>
         </member>
         <member name="F:DotNetNuke.Modules.EmbedComparison.Settings.lblKey">
             <summary>
@@ -185,25 +173,6 @@
             </summary>
             -----------------------------------------------------------------------------
         </member>
-        <member name="T:DotNetNuke.Modules.EmbedComparison.Components.FeatureController">
-            -----------------------------------------------------------------------------
-            <summary>
-            The Controller class for EmbedComparison
-            
-            The FeatureController class is defined as the BusinessController in the manifest file (.dnn)
-            DotNetNuke will poll this class to find out which Interfaces the class implements. 
-            
-            The IPortable interface is used to import/export content from a DNN module
-            
-            The ISearchable interface is used by DNN to index the content of a module
-            
-            The IUpgradeable interface allows module developers to execute code during the upgrade 
-            process for a module.
-            
-            Below you will find stubbed out implementations of each, uncomment and populate with your own data
-            </summary>
-            -----------------------------------------------------------------------------
-        </member>
         <member name="T:DotNetNuke.Modules.EmbedComparison.Edit">
             -----------------------------------------------------------------------------
             <summary>
@@ -224,6 +193,73 @@
             Page_Load runs when the control is loaded
             </summary>
             -----------------------------------------------------------------------------
+        </member>
+        <member name="F:DotNetNuke.Modules.EmbedComparison.Edit.Title">
+            <summary>
+            Title элемент управления.
+            </summary>
+            <remarks>
+            Автоматически создаваемое поле.
+            Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.EmbedComparison.Edit.txtDescription">
+            <summary>
+            txtDescription элемент управления.
+            </summary>
+            <remarks>
+            Автоматически создаваемое поле.
+            Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.EmbedComparison.Edit.cmdUpdate">
+            <summary>
+            cmdUpdate элемент управления.
+            </summary>
+            <remarks>
+            Автоматически создаваемое поле.
+            Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.EmbedComparison.Edit.cmdCancel">
+            <summary>
+            cmdCancel элемент управления.
+            </summary>
+            <remarks>
+            Автоматически создаваемое поле.
+            Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+            </remarks>
+        </member>
+        <member name="T:DotNetNuke.Modules.EmbedComparison.View">
+            -----------------------------------------------------------------------------
+            <summary>
+            The View class displays the content
+            
+            Typically your view control would be used to display content or functionality in your module.
+            
+            View may be the only control you have in your project depending on the complexity of your module
+            
+            Because the control inherits from EmbedComparisonModuleBase you have access to any custom properties
+            defined there, as well as properties from DNN such as PortalId, ModuleId, TabId, UserId and many more.
+            
+            </summary>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="M:DotNetNuke.Modules.EmbedComparison.View.Page_Load(System.Object,System.EventArgs)">
+            -----------------------------------------------------------------------------
+            <summary>
+            Page_Load runs when the control is loaded
+            </summary>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="F:DotNetNuke.Modules.EmbedComparison.View.documentViewer">
+            <summary>
+            documentViewer control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
         </member>
     </members>
 </doc>

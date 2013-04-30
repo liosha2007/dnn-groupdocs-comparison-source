@@ -12,6 +12,8 @@
 
 using System;
 using DotNetNuke.Services.Exceptions;
+using DotNetNuke.Entities.Modules;
+using DotNetNuke.Common;
 
 namespace DotNetNuke.Modules.EmbedComparison
 {
@@ -53,8 +55,19 @@ namespace DotNetNuke.Modules.EmbedComparison
         {
             try
             {
-                //Implement your edit logic for your module
+                if (!IsPostBack)
+                {
+                    var dc = new ModuleController();
+                    var module = dc.GetModule(ModuleId);
 
+                    if (module != null)
+                    {
+                        Title.Text = module.ModuleTitle;
+                        txtDescription.Text = module.DesktopModule.Description;
+                    }
+                    else
+                        Response.Redirect(Globals.NavigateURL(), true);
+                }
             }
             catch (Exception exc) //Module failed to load
             {
@@ -64,6 +77,28 @@ namespace DotNetNuke.Modules.EmbedComparison
 
         #endregion
 
+        protected void cmdUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var controller = new ModuleController();
+                var module = controller.GetModule(ModuleId);
+
+                module.ModuleTitle = Title.Text;
+                module.DesktopModule.Description = txtDescription.Text;
+
+                controller.UpdateModule(module);
+                Response.Redirect(Globals.NavigateURL(), true);
+            }
+            catch (Exception exc)
+            {
+                Exceptions.ProcessModuleLoadException(this, exc);
+            }
+        }
+        protected void cmdCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect(Globals.NavigateURL(), true);
+        }
     }
 
 }
